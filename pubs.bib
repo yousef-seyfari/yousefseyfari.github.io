@@ -1,0 +1,248 @@
+@InProceedings{salehi2022automated,
+  author={Khayyam Salehi and Ali A. Noroozi and Sepehr Amir-Mohammadian and Mohammadsadegh Mohagheghi},
+  title={An Automated Quantitative Information Flow Analysis for Concurrent Programs},
+  booktitle={Quantitative Evaluation of Systems},
+  year={2022},
+  publisher={Springer},
+  pages={43--63},
+  isbn={978-3-031-16336-4},
+  abstract={
+              Quantitative information flow is a rigorous approach for evaluating the security of a system. It is used to quantify 
+              the amount of secret information leaked to the public outputs. In this paper, we propose an automated approach for 
+              quantitative information flow analysis of concurrent programs. Markovian processes are used to model the behavior of these programs. 
+              To this end, we assume that the attacker is capable of observing the internal behavior of the program and propose 
+              an equivalence relation, back-bisimulation, to capture the attacker's view of the program behavior. A partition refinement algorithm 
+              is developed to construct the back-bisimulation quotient of the program model and then a quantification method is proposed for 
+              computing the information leakage using the quotient. Finally, an anonymous protocol, dining cryptographers, is analyzed as 
+              a case study to show applicability and scalability of the proposed approach.}
+}
+
+@InProceedings{salehi2021quantifying,
+  author={Khayyam Salehi and Ali A. Noroozi and Sepehr Amir-Mohammadian},
+  title={Quantifying Information Leakage of Probabilistic Programs Using the PRISM Model Checker},
+  booktitle={Emerging Security Information, Systems and Technologies},
+  year={2021},
+  publisher={IARIA},
+  pages={47--52},
+  isbn={978-1-61208-919-5},
+  abstract={
+              Information leakage is the flow of information from secret inputs of a program to its public outputs. One effective approach 
+              to identify information leakage and potentially preserve the confidentiality of a program is to quantify the flow of information 
+              that is associated with the execution of that program, and check whether this value meets predefined thresholds. 
+              For example, the program may be considered insecure, if this quantified value is higher than the threshold. 
+              In this paper, an automated method is proposed to compute the information leakage of probabilistic programs. 
+              We use Markov chains to model these programs, and reduce the problem of measuring the information leakage to the problem of
+              computing the joint probabilities of secrets and public outputs. The proposed method traverses the Markov chain 
+              to find the secret inputs and the public outputs and subsequently, calculate the joint probabilities. 
+              The method has been implemented into a tool called PRISM-Leak, which uses the PRISM model checker to build 
+              the Markov chain of input programs. The applicability of the proposed method is highlighted by analyzing 
+              a probabilistic protocol and quantifying its leakage.}
+}
+
+@InProceedings{noroozi2019secure,
+	author={Ali A. Noroozi and Khayyam Salehi and Jaber Karimpour and Ayaz Isazadeh},
+	editor={Garg, Deepak and Kumar, N. V. Narendra and Shyamasundar, Rudrapatna K.},
+	title={Secure Information Flow Analysis Using the PRISM Model Checker},
+	booktitle={Information Systems Security},
+	year={2019},
+	publisher={Springer International Publishing},
+	pages={154--172},
+	isbn={978-3-030-36945-3},
+	abstract={
+              Secure information flow checks whether sensitive information leak to public outputs of a program or not. 
+              It has been widely used to analyze the security of various programs and protocols and guarantee their 
+              confidentiality and robustness.
+              In this paper, the problem of verifying secure information flow of concurrent probabilistic programs is discussed. 
+              Programs are modeled by Markovian processes and secure information flow is specified by observational determinism. 
+              Then, two algorithms are proposed to verify observational determinism in the Markovian model. 
+              The algorithms employ a trace-based approach to traverse the model and check for satisfiability of observational determinism. 
+              The proposed algorithms have been implemented into a tool called PRISM-Leak, which is constructed on the PRISM model checker. 
+              An anonymity protocol, the dining cryptographers, is discussed as a case study to show how PRISM-Leak can be used to evaluate 
+              the security of programs. The scalability of the tool is demonstrated by comparing it to the state-of-the-art information flow tools.}
+}
+
+@article{noroozi2019information,
+	title = {Information leakage of multi-threaded programs},
+	journal = {Computers & Electrical Engineering},
+	volume = {78},
+	pages = {400--419},
+	year = {2019},
+	issn = {0045-7906},
+	doi = {https://doi.org/10.1016/j.compeleceng.2019.07.018},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045790618331549},
+	author = {Ali A. Noroozi and Jaber Karimpour and Ayaz Isazadeh},
+	keywords = {Quantitative information flow, Information leakage, Multi-threaded program, Markovian processes, Confidentiality, PRISM-Leak},
+	abstract={
+              Quantitative information flow is an important technique for measuring information leakage of a program. It is widely used
+              in analyzing anonymity protocols and timing channels. One area of interest is to quantify the information leakage of
+              multi-threaded programs, which has not been well-studied in prior work. In this paper, an automated trace-based approach is
+              proposed to precisely quantify information leakage of shared-memory multi-threaded programs. The approach takes into account
+              the effect of schedulers and leakage in intermediate states of executions. The programs are modeled by Markovian processes.
+              Then, variants of information leakage, including expected, bounded time, maximum, and minimum leakages are measured. 
+              The validity of the approach is demonstrated by implementing it in a tool PRISM-Leak, which is built upon PRISM, 
+              a probabilistic model checker. Finally, two case studies are utilized to analyze and compare the approach against
+              state-of-the-art leakage quantification tools.
+              }
+}
+
+@article{noroozi2019bisimulation,
+	title={Bisimulation for Secure Information Flow Analysis of Multi-Threaded Programs},
+	author={Noroozi, Ali A and Karimpour, Jaber and Isazadeh, Ayaz},
+	journal={Mathematical and Computational Applications},
+	volume={24},
+	number={2},
+	pages={64},
+	year={2019},
+	doi={10.3390/mca24020064},
+	publisher={Multidisciplinary Digital Publishing Institute},
+	abstract={
+              Preserving the confidentiality of information is a growing concern in software development. Secure information flow 
+              is intended to maintain the confidentiality of sensitive information by preventing them from flowing to attackers. 
+              This paper discusses how to ensure confidentiality for multi-threaded programs through a property called 
+              observational determinism. Operational semantics of multi-threaded programs are modeled using Kripke structures. 
+              Observational determinism is formalized in terms of divergence weak low-bisimulation. Bisimulation is an equivalence 
+              relation associating executions that simulate each other. The new property is called 
+              bisimulation-based observational determinism. Furthermore, a model checking method is proposed to verify the new property 
+              and ensure that secure information flow holds in a multi-threaded program. The model checking method successively 
+              refines the Kripke model of the program until the quotient of the model with respect to divergence weak low-bisimulation 
+              is reached. Then, bisimulation-based observational determinism is checked on the quotient, which is a minimized model of 
+              the concrete Kripke model. The time complexity of the proposed method is polynomial in the size of the Kripke model. 
+              The proposed approach has been implemented on top of PRISM, a probabilistic model checking tool. Finally, 
+              a case study is discussed to show the applicability of the proposed approach.	
+             }
+}
+
+@article{noroozi2017verifying,
+  title={Verifying Weak Probabilistic Noninterference},
+  author={Noroozi, Ali A. and Karimpour, Jaber and Isazadeh, Ayaz and Lotfi, Shahriar},
+  journal={INTERNATIONAL JOURNAL OF ADVANCED COMPUTER SCIENCE AND APPLICATIONS},
+  volume={8},
+  number={10},
+  pages={196--206},
+  year={2017},
+  publisher={SCIENCE \& INFORMATION SAI ORGANIZATION LTD 19 BOLLING RD, BRADFORD, WEST YORKSHIRE, 00000, ENGLAND},
+  abstract={
+            Weak probabilistic noninterference is a security property for enforcing confidentiality in multi-threaded programs. 
+            It aims to guarantee secure flow of information in the program and ensure that sensitive information does not leak 
+            to attackers. In this paper, the problem of verifying weak probabilistic noninterference by leveraging formal methods, 
+            in particular algorithmic verification, is discussed. Behavior of multi-threaded programs is modeled using probabilistic 
+            Kripke structures and formalize weak probabilistic noninterference in terms of these structures. Then, a verification 
+            algorithm is proposed to check weak probabilistic noninterference. The algorithm uses an abstraction technique to compute 
+            quotient space of the program with respect to an equivalence relation called weak probabilistic bisimulation and does 
+            a simple check to decide whether the security property is satisfied or not. The progress made is demonstrated by a 
+            real-world case study. It is expected that the proposed approach constitutes a significant step towards more widely 
+            applicable secure information flow analysis.
+           } 
+}
+
+
+@InProceedings{karimpour2015verifying,
+author={Karimpour, Jaber and Isazadeh, Ayaz and Noroozi, Ali A.},
+editor={Federrath, Hannes and Gollmann, Dieter},
+title={Verifying Observational Determinism},
+booktitle={ICT Systems Security and Privacy Protection},
+year={2015},
+publisher={Springer International Publishing},
+address={Cham},
+pages={82--93},
+isbn={978-3-319-18467-8},
+abstract={
+          This paper proposes an approach to verify information flow security of concurrent programs. It discusses a hyperproperty 
+          called observational determinism which aims to ensure secure information flow in concurrent programs, and proves how this 
+          hyperproperty can be verified by stutter equivalence checking. More precisely, it defines observational determinism in 
+          terms of stutter equivalence of all traces having the same low initial value and shows how stutter trace equivalence can 
+          be verified by computing a divergence stutter bisimulation quotient. The approach is illustrated by verifying a small example.
+         }
+}
+
+@article{karimpour2014modified,
+  title={Modified Bitwise Hill Crypto System},
+  author={Karimpour, Jaber and Aghdasifam, Masoud and Noroozi, Ali A.},
+  volume={12},
+  number={2},
+  pages={11--15},
+  year={2014},
+  publisher={The CSI Journal on Computer Science and Engineering},
+  abstract={
+            Hill Cipher (HC) is a matrix-based polygraph symmetric data encryption method. In 2011, Desoky et al. proposed 
+            the Bitwise Hill Crypto System (BHC) which is based on bit arithmetic. In this paper, we analyze BHC and show that 
+            it is insecure. Then, we propose a new modification using chaotic maps which provides better security.
+           }
+}
+
+@CONFERENCE{karimpour2013modified,
+  title={Modified Bitwise Hill Crypto System},
+  author={Karimpour, Jaber and Aghdasifam, Masoud and Noroozi, Ali A.},
+  year={2013},
+  booktitle={The 2013 CSI International Symposium on Computer Science and Software Engineering},
+  abstract={
+            Hill Cipher (HC) is a matrix-based polygraph symmetric data encryption method. In 2011, Desoky et al. proposed 
+            the Bitwise Hill Crypto System (BHC) which is based on bit arithmetic. In this paper, we analyze BHC and show that 
+            it is insecure. Then, we propose a new modification using chaotic maps which provides better security.
+           }
+}
+
+@ARTICLE{karimpour2013formal,
+author={Jaber Karimpour and Robab Alyari and Ali A. Noroozi},
+journal={IET Software},
+title={Formal framework for specifying dynamic reconfiguration of adaptive systems},
+year={2013},
+volume={7},
+number={5},
+pages={258-270},
+keywords={adaptive systems;formal specification;software architecture;synchronisation;vectors;synchronisation vectors;
+		  adaptor system;mathematical model;system architecture;adaptation contract;change reconfiguration;change problem;
+		  software adaptation techniques;software systems;adaptive systems;dynamic reconfiguration specification;formal framework},
+doi={10.1049/iet-sen.2012.0163},
+ISSN={1751-8806},
+month={October},
+abstract={
+          In the real-world, there are many types of software systems and software engineers always deal with changes. The value
+          of large systems decreases significantly as the requirements and operational environment change over time. Modern software
+          systems are expected to have dynamic reconfigurations to cope with failure and changes. Software adaptation techniques try
+          to overcome the change problem by reconfiguration. In this study, at first, the authors present a formal framework to represent
+          the whole system and then, build a mathematical model called ‘adaptor’ based on adaptation contract and system architecture.
+          The adaptor is used to define automatic fit between two different components of the system. Finally, for specifying the whole
+          adaptor system the authors will introduce adaptor network using synchronisation vectors.
+         }
+}
+
+@article{karimpour2012impact,
+  title={The impact of feature selection on web spam detection},
+  author={Karimpour, Jaber and Noroozi, Ali A and Abadi, Adeleh},
+  journal={International Journal of Intelligent Systems and Applications},
+  volume={4},
+  number={9},
+  pages={61--67},
+  year={2012},
+  publisher={Modern Education and Computer Science Press},
+  abstract={
+            Search engine is one of the most important tools for managing the massive amount of distributed web content. Web spamming tries to 
+            deceive search engines to rank some pages higher than they deserve. Many methods have been proposed to combat web spamming and 
+            to detect spam pages. One basic one is using classification, i.e., learning a classification model for classifying web pages 
+            to spam or non-spam. This work tries to select the best feature set for classification of web spam using imperialist competitive 
+            algorithm and genetic algorithm. Imperialist competitive algorithm is a novel optimization algorithm that is inspired by socio-political 
+            process of imperialism in the real world. Experiments are carried out on WEBSPAM-UK2007 data set, which show feature selection improves 
+            classification accuracy, and imperialist competitive algorithm outperforms GA.
+           }
+}
+
+@article{karimpour2012web,
+  title={Web Spam Detection by Learning from Small Labeled Samples},
+  author={Karimpour, Jaber and Noroozi, Ali A and Alizadeh, Somayeh},
+  journal={International Journal of Computer Applications},
+  volume={50},
+  number={21},
+  pages={1--5},
+  year={2012},
+  abstract={
+     Web spamming tries to deceive search engines to rank some pages higher than they deserve. Many methods have been proposed to combat web spamming 
+     and to detect spam pages. One basic method is using classification, i.e., learning a classification model from previously labeled training data 
+     and using this model for classifying web pages to spam or non-spam. A drawback of this method is that manually labeling a large number of web pages 
+     to generate the training data can be biased, non-accurate, labor intensive and time consuming. In this paper, we are going to propose a new method to
+     resolve this drawback by using semi-supervised learning to automatically label the training data. To do this, we incorporate Expectation-Maximization
+     algorithm that is an efficient and an important algorithm of semi-supervised learning. Experiments are carried out on the real web spam data, which 
+     show the new method, performs very well in practice.
+           }
+}
+

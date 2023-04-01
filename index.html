@@ -4,9 +4,150 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Yousef Seyfari</title>
 
-</head>
-<body>
-  <p>Hello World</p>
+  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>	
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+ <!--<link rel="icon" 
+      type="image/png" 
+	  href="images/favicon.png">-->
+	  
 
+</head>
+
+
+<body>
+<div class="header">
+	<div id="logo">Yousef Seyfari</div>
+	<ul class="main-menu">
+		<li><a href="#about">About Me</a></li>
+		<li><a href="#research">Research</a></li>
+		<li><a href="#teaching">Teaching</a></li>
+		<!--<li><a href="#contact">Contact</a></li>-->
+	</ul>
+</div>
+
+<div class="container">
+
+	<!--Begin About Section-->
+    
+    <div id="about">
+        <div class="about-me">
+            <h1>About Me</h1>         
+            <ul class="top-social">
+				<li><a href="https://scholar.google.com/citations?user=99q4UTcAAAAJ&hl=en&oi=ao" class="gscholar" target="_blank"><img class="social-icon" src="./images/scholar.ico" alt="Google Scholar"></a></li>
+				<li><a href="https://github.com/yousef-seyfari" class="github" target="_blank"><img class="social-icon" src="./images/github.ico"  alt="Github"></a></li>
+				<li><a href="https://www.linkedin.com/in/yousef-seyfari-5955b5243/ class="linkedin" target="_blank"><img class="social-icon" src="./images/linkedin.ico" alt="LinkedIn"></a></li>
+            </ul>
+		</div>
+            
+		<hr>
+				
+		<div class="content1">
+			<img src="images/yousef_seyfari.jpg" alt="My Photo">
+					
+			<h2>Yousef Seyfari</h2>                        
+			<p>PhD, Computer Science<br />
+				Python developer<br>
+				Machine Learning <br/>
+				mail2seyfari AT gmail DOT com
+			</p>
+			
+			<p>
+				I work as assistant professor at <a href="https://maragheh.ac.ir/">University of Maragheh</a>.   
+			</p>
+			<p>
+				I got my Ph.D. at University of Tabriz, under supervision of <a href="#">Dr. Shahriar Lotfi</a> and <a href="http://simap.tabrizu.ac.ir/cv/karimpour/?lang=en-gb">Dr. Jaber Karimpour</a>. My research interests are High Performance Computing (HPC), parallelization, loop tiling. 
+			</p>
+						
+			<p>I received an M.Sc. Eng. degree in Computer Science from Amirkabir University (Tehran Polytechnic) in 2011.</p>
+		</div>                
+ 
+    </div>
+
+<!--End About Section-->
+
+
+<!--Begin Research Section-->  
+    
+<div id="research">
+    	
+	<h1>Research</h1>
+
+	<hr> 
+	<div class="top-divider"></div>
+
+        	
+	<div class="content">
+    	My research interests are High Performance Computing (HPC), parallelization, loop tiling.<br>
+		Some of my research papers:<br>
+		<br>
+		
+		<div>	
+			<b>2021</b><br>
+			
+			<ul>
+				<li>
+				A. Younesi, R. Afrouzian and Y. Seyfari: <b>A transfer learning approach with convolutional neural network for Face Mask Detection.</b> <i> Journal of Advanced Signal Processing 127-135 </i> (2021) [&nbsp;<a href="pubs_bib.html#younesi2021transfer">bib</a>pdf]
+				</li>
+			</ul>
+
+			
+	</div>
+</div>
+
+<!--End Research Section-->
+
+
+<!--Begin Teaching Section-->   
+    
+<div id="teaching">
+    	
+	<h1>Teaching</h1>
+
+	<div class="top-divider"><hr></div>
+
+        
+	<div class="content">
+		Since 2011 I have been teachingdifferent courses each semester at <a href="http://tabrizu.ac.ir/en">University of Tabriz (UT)</a>, <a href="http://maragheh.ac.ir/en">University of Maragheh (UM)</a>, <a href="http://miyanehtech.tabrizu.ac.ir/">Technical Faculty of Miyaneh (TFM)</a> and <a href="http://en.daneshvaran.ac.ir/">University College of Daneshvaran (UCD)</a>.
+		<br><br>
+
+		<b>Spring semester 2022</b><br>
+		<ul>
+			<li>
+			Programming using Matlab: UM<br>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--End Teaching Section-->
+
+</div> <!--End container-->
+
+
+ <!-- The JavaScript -->  
+        
+<script>
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+</script>
 </body>
 </html>
+
